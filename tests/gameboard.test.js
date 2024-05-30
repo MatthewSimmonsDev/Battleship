@@ -1,6 +1,9 @@
 import { GameBoard } from "../src/gameboard";
 
 const gameBoard = new GameBoard();
-test("creates a ship", () => {
-  expect(gameBoard).toBeDefined();
+
+describe("Receive Attack", () => {
+  test("should be 4", () => {
+    expect(gameBoard.recieveAttack(4)).toBe(4);
+  });
 });

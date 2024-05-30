@@ -6,10 +6,10 @@ export class GameBoard {
   }
 
   placeShip(length, timesHit, coordinates, orientation) {
-    let ship = new Ship(length, timesHit, coordinates, orientation);
+    return new Ship(length, timesHit, coordinates, orientation);
   }
 
-  recieveAttack(coordinates) {}
+  recieveAttack(coordinates) {
+    return coordinates;
+  }
 }
-
-module.exports.gameBoard = GameBoard;

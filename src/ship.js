@@ -18,5 +18,3 @@ export class Ship {
     this.isSunk = true;
   }
 }
-
-module.exports.ship = Ship;
