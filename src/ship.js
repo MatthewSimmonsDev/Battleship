@@ -1,8 +1,9 @@
 export class Ship {
-  constructor(length, timesHit, coordinates, orientation) {
+  constructor(length, timesHit, coordinateX, coordinateY, orientation) {
     this.length = length;
     this.timesHit = timesHit;
-    this.coordinates = coordinates;
+    this.coordinateX = coordinateX;
+    this.coordinateY = coordinateY;
     this.orientation = orientation;
   }
 
@@ -15,6 +16,8 @@ export class Ship {
   }
 
   sunk() {
-    this.isSunk = true;
+    if (this.timesHit === this.length) {
+      this.isSunk = true;
+    }
   }
 }

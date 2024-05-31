@@ -1,15 +1,23 @@
 import { Ship } from "./ship";
 
 export class GameBoard {
-  constructor(boardSize) {
-    this.boardSize = boardSize;
+  constructor() {}
+
+  createBoard() {
+    const board = new Array(10);
+    for (let i = 0; i < board.length; i++) {
+      board[i] = new Array(10);
+    }
+    console.log(board);
   }
 
-  placeShip(length, timesHit, coordinates, orientation) {
-    return new Ship(length, timesHit, coordinates, orientation);
+  placeShip(length, timesHit, coordinateX, coordinateY, orientation) {
+    return new Ship(length, timesHit, coordinateX, coordinateY, orientation);
   }
 
-  recieveAttack(coordinates) {
-    return coordinates;
+  markBoardCoordinates(coordinateX, coordinateY) {}
+
+  recieveAttack(coordinateX, coordinateY) {
+    return coordinateX, coordinateY;
   }
 }
