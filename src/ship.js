@@ -1,12 +1,12 @@
 export class Ship {
-  constructor(length, timesHit, coordinateX, coordinateY, orientation) {
+  constructor(length, timesHit, coordinates, id) {
     this.length = length;
     this.timesHit = timesHit;
-    this.coordinateX = coordinateX;
-    this.coordinateY = coordinateY;
-    this.orientation = orientation;
+    this.coordinates = coordinates;
+    this.id = id;
   }
 
+  id = 0;
   length = 0;
   timesHit = 0;
   isSunk = false;

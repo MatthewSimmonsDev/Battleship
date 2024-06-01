@@ -15,7 +15,12 @@ export class GameBoard {
   }
 
   placeShip(length, timesHit, coordinateX, coordinateY) {
-    this.markBoardCoordinates(coordinateX, coordinateY);
+    const ship = new Ship(
+      length,
+      timesHit,
+      this.board[coordinateX][coordinateY],
+      this.id
+    );
     for (let x = 0; x < this.board.length; x++) {
       for (let y = 0; y < this.board.length; y++) {
         if (this.board[coordinateX][coordinateY] !== "Occupied") {
@@ -25,13 +30,12 @@ export class GameBoard {
         }
       }
     }
-
-    return new Ship(length, timesHit, coordinateX, coordinateY);
+    console.log(ship);
   }
 
-  markBoardCoordinates(coordinateX, coordinateY) {}
-
   recieveAttack(coordinateX, coordinateY) {
-    return coordinateX, coordinateY;
+    if (this.board[coordinateX][coordinateY] === "Occupied") {
+    }
+    this.board[coordinateX][coordinateY] = "Hit";
   }
 }
